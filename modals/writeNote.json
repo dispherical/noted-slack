@@ -1,0 +1,40 @@
+{
+	"type": "modal",
+	"title": {
+		"type": "plain_text",
+		"text": "Noted",
+		"emoji": true
+	},
+	"submit": {
+		"type": "plain_text",
+		"text": "Submit",
+		"emoji": true
+	},
+	"close": {
+		"type": "plain_text",
+		"text": "Cancel",
+		"emoji": true
+	},
+	"blocks": [
+		{
+			"type": "section",
+			"text": {
+				"type": "mrkdwn",
+				"text": "Below you may write a community note. It will be sent to voting afterwards. Make sure you write high quality sources, has important context, talks about the post directly, and uses unbiased language."
+			}
+		},
+		{
+			"type": "input",
+			"element": {
+				"type": "plain_text_input",
+				"multiline": true,
+				"action_id": "plain_text_input-action"
+			},
+			"label": {
+				"type": "plain_text",
+				"text": "Community Note:",
+				"emoji": true
+			}
+		}
+	]
+}

@@ -1,0 +1,24 @@
+generator client {
+    provider      = "prisma-client-js"
+    binaryTargets = ["native"]
+}
+
+datasource db {
+    provider = "sqlite"
+    url      = "file:./database.sqlite"
+}
+
+model Note {
+    id            String   @id @unique
+    createdAt     DateTime @default(now())
+    channelId     String
+    refrenceId    String
+    noteMessageId String?
+    requestId     String?
+}
+
+model Request {
+    id          String   @id @unique
+    createdAt   DateTime @default(now())
+    requestedBy String
+}
